@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests">
+  <testsuite name="src/math.test.ts" tests="2" failures="1" errors="0" skipped="0" time="0.123">
+    <testcase classname="src/math.test.ts add" name="adds numbers" time="0.01"></testcase>
+    <testcase classname="src/math.test.ts add" name="subtracts numbers" time="0.02">
+      <failure message="expected 2 to be 3">Error: expected 2 to be 3</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

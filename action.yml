@@ -1,0 +1,23 @@
+name: 'FlakyRadar'
+description: 'Detecta tests flaky comparando reportes JUnit XML entre corridas del mismo repo.'
+author: 'Armando'
+branding:
+  icon: 'radio'
+  color: 'orange'
+
+inputs:
+  junit-path:
+    description: 'Glob de rutas a los reportes JUnit XML generados por el paso de tests.'
+    required: true
+  github-token:
+    description: 'Token usado para publicar el comentario en el PR (requiere permiso pull-requests: write).'
+    required: false
+    default: ${{ github.token }}
+
+outputs:
+  flaky-count:
+    description: 'Cantidad de tests detectados como flaky en esta corrida.'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
